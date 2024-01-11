@@ -13,10 +13,20 @@ export const sendMessage = async (message, phonNumber) => {
     phone_number: phonNumber,
   };
 
-  const headers = {
-    "Content-Type": "application/json",
-    Token: TOKEN,
-  };
+  //   const headers = {
+  //     "Content-Type": "application/json",
+  //     Token: TOKEN,
+  //   };
+  const headers = [
+    {
+      key: "Content-Type",
+      value: "application/json",
+    },
+    {
+      key: "Token",
+      value: TOKEN,
+    },
+  ];
 
   const options = {
     method: "POST",
